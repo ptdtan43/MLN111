@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MLN111 – Triết học về Con người | Nhóm 6 | FPT HCM</title>
+  <meta name="description" content="Bài thuyết trình môn MLN111 – Triết học Mác–Lênin: Quan hệ cá nhân và xã hội, vai trò quần chúng và lãnh tụ. Nhóm 6, ĐH FPT TP.HCM." />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☭</text></svg>" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     PROGRESS BAR
+     ═══════════════════════════════════════ -->
+<div id="progress-bar"></div>
+
+<!-- ═══════════════════════════════════════
+     NAVIGATION
+     ═══════════════════════════════════════ -->
+<nav id="navbar">
+  <div class="nav-brand">
+    <div class="nav-logo">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Star shape -->
+        <polygon points="14,2 16.5,10 25,10 18.5,15.5 21,23.5 14,18.5 7,23.5 9.5,15.5 3,10 11.5,10" fill="#f8c471" opacity="0.95"/>
+        <!-- Hammer -->
+        <rect x="10" y="13" width="4.5" height="2" rx="0.5" fill="#c0392b" transform="rotate(-40 12 14)"/>
+        <rect x="12.5" y="14.5" width="1.5" height="5" rx="0.5" fill="#c0392b" transform="rotate(-40 13 17)"/>
+        <!-- Sickle arc -->
+        <path d="M15 11 Q20 11 19 16 Q18.5 18 17 18.5" stroke="#c0392b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div>
+      <div class="nav-title">Triết học Mác–Lênin</div>
+      <div class="nav-subtitle">Nhóm 6 · ĐH FPT HCM</div>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#hero" class="nav-link">Trang chủ</a></li>
+    <li><a href="#boi-canh" class="nav-link">Bối cảnh</a></li>
+    <li><a href="#ca-nhan-xa-hoi" class="nav-link">Cá nhân & XH</a></li>
+    <li><a href="#quan-chung-lanh-tu" class="nav-link">Quần chúng & Lãnh tụ</a></li>
+    <li><a href="#tinh-huong" class="nav-link">Tình huống</a></li>
+    <li><a href="#viet-nam" class="nav-link">Liên hệ VN</a></li>
+    <li><a href="#qa" class="nav-link">Q&A</a></li>
+  </ul>
+</nav>
+
+<!-- ═══════════════════════════════════════
+     SECTION 1: HERO
+     ═══════════════════════════════════════ -->
+<section id="hero">
+  <canvas id="particles-canvas"></canvas>
+
+  <div class="hero-content">
+    <!-- Left -->
+    <div class="hero-left">
+
+      <h1 class="hero-title">
+        <span class="highlight">Triết học</span><br>
+        về <span class="highlight-gold">Con người</span><br>
+        trong xã hội
+      </h1>
+
+      <p class="hero-desc">
+        Quan hệ cá nhân và xã hội — vai trò của quần chúng nhân dân và lãnh tụ trong lịch sử theo quan điểm Triết học Mác–Lênin.
+      </p>
+
+      <div class="hero-meta">
+        <span class="hero-tag">📘 Chương 3 · Phần V</span>
+        <span class="hero-tag">🏫 ĐH FPT HCM</span>
+        <span class="hero-tag">👥 Nhóm 6</span>
+
+      </div>
+
+      <div class="hero-cta">
+        <a href="#boi-canh" class="btn-primary" id="btn-start">
+          ▶ Bắt đầu thuyết trình
+        </a>
+        <a href="#qa" class="btn-secondary" id="btn-qa">
+          💬 Đến phần Q&A
+        </a>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="scroll-indicator">
+    <span>CUỘN XUỐNG</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 2: BỐI CẢNH
+     ═══════════════════════════════════════ -->
+<section id="boi-canh">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-tag">📖 Chương 3 · Chủ nghĩa duy vật lịch sử</span>
+      <h2 class="section-heading">Bối cảnh <span>Phần V</span></h2>
+      <div class="section-divider"></div>
+      <p class="section-desc">
+        Trong Chủ nghĩa duy vật lịch sử, Mác–Lênin đặt con người ở vị trí trung tâm của lịch sử — vừa là chủ thể sáng tạo, vừa là sản phẩm của điều kiện xã hội.
+      </p>
+    </div>
+
+    <div class="two-col" style="margin-top: 3rem;">
+      <div class="reveal-left delay-1">
+        <div class="timeline">
+          <div class="timeline-item">
+            <h4>Phần I–IV: Nền tảng lịch sử</h4>
+            <p>Hình thái kinh tế–xã hội, tồn tại xã hội & ý thức xã hội, giai cấp và đấu tranh giai cấp, nhà nước và cách mạng.</p>
+          </div>
+          <div class="timeline-item">
+            <h4>Phần V: Triết học về Con người</h4>
+            <p>Con người trong mối quan hệ với xã hội — cá nhân, quần chúng, lãnh tụ và vai trò trong lịch sử. <strong style="color:var(--gold)">← Nội dung hôm nay</strong></p>
+          </div>
+          <div class="timeline-item">
+            <h4>Ý nghĩa thực tiễn</h4>
+            <p>Áp dụng vào sự nghiệp cách mạng Việt Nam, xây dựng con người mới trong thời đại Hồ Chí Minh.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal-right delay-2">
+        <div class="glass-card" style="height:100%;">
+          <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:1.2rem;color:var(--gold)">🎯 Mục tiêu bài học</h3>
+          <ul class="concept-list" style="gap:0.9rem;">
+            <li>Hiểu quan điểm Mác–Lênin về <strong>quan hệ cá nhân và xã hội</strong></li>
+            <li>Phân tích vai trò của <strong>quần chúng nhân dân</strong> trong lịch sử</li>
+            <li>Đánh giá đúng vai trò của <strong>lãnh tụ</strong> và mối liên hệ với quần chúng</li>
+            <li>Liên hệ <strong>thực tiễn cách mạng Việt Nam</strong></li>
+            <li>Vận dụng vào <strong>cuộc sống sinh viên</strong> hiện nay</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-card reveal delay-1">
+        <span class="stat-number" data-target="3">0</span>
+        <div class="stat-label">Nội dung chính cần nắm</div>
+      </div>
+      <div class="stat-card reveal delay-2">
+        <span class="stat-number" data-target="5">0</span>
+        <div class="stat-label">Vai trò của quần chúng nhân dân</div>
+      </div>
+      <div class="stat-card reveal delay-3">
+        <span class="stat-number" data-target="1">0</span>
+        <div class="stat-label">Tình huống thực tế phân tích</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 3: CÁ NHÂN & XÃ HỘI
+     ═══════════════════════════════════════ -->
+<section id="ca-nhan-xa-hoi">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-tag">👤 Nội dung 1</span>
+      <h2 class="section-heading">Quan hệ <span>Cá nhân & Xã hội</span></h2>
+      <div class="section-divider"></div>
+      <p class="section-desc">
+        Theo Mác–Lênin, cá nhân và xã hội có mối quan hệ biện chứng không thể tách rời — cá nhân tồn tại trong xã hội, xã hội được tạo nên bởi cá nhân.
+      </p>
+    </div>
+
+    <!-- Concepts -->
+    <div class="two-col">
+      <div class="concept-card reveal-left delay-1">
+        <div class="concept-icon">🧑</div>
+        <h3>Cá nhân là gì?</h3>
+        <p>Là con người cụ thể, mang tính đơn nhất — có những đặc điểm riêng về thể chất, tâm lý, năng lực, nhu cầu, hành vi.</p>
+        <ul class="concept-list" style="margin-top:1rem;">
+          <li>Là chủ thể hoạt động xã hội</li>
+          <li>Mang bản chất xã hội (không phải tự nhiên thuần túy)</li>
+          <li>Tự ý thức về bản thân và thế giới</li>
+          <li>Phát triển trong quan hệ xã hội</li>
+        </ul>
+      </div>
+      <div class="concept-card gold reveal-right delay-2">
+        <div class="concept-icon">🏛️</div>
+        <h3>Xã hội là gì?</h3>
+        <p>Là tổng hợp các quan hệ xã hội giữa người với người, được hình thành trong quá trình hoạt động thực tiễn — đặc biệt là hoạt động sản xuất.</p>
+        <ul class="concept-list" style="margin-top:1rem;">
+          <li>Là môi trường sống của cá nhân</li>
+          <li>Quy định điều kiện phát triển cá nhân</li>
+          <li>Bảo tồn và truyền đạt các giá trị văn hóa</li>
+          <li>Là nơi cá nhân thể hiện bản thân</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Relation Diagram -->
+    <div class="reveal" style="margin-top:3rem;">
+      <h3 style="text-align:center;font-size:1.2rem;font-weight:700;margin-bottom:2rem;color:var(--text-secondary)">Mối quan hệ biện chứng</h3>
+      <div class="relation-diagram">
+        <div class="relation-node">
+          <div class="node-icon">🧑</div>
+          <h4>Cá nhân</h4>
+          <p>Chủ thể hành động</p>
+        </div>
+        <div class="relation-arrow">
+          <div class="arrow-line"></div>
+          <div class="arrow-label">Biện chứng<br>tác động qua lại</div>
+        </div>
+        <div class="relation-node">
+          <div class="node-icon">🏛️</div>
+          <h4>Xã hội</h4>
+          <p>Môi trường tồn tại</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Principles -->
+    <div class="reveal" style="margin-top:1rem;">
+      <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:0.5rem;">Các nguyên tắc cơ bản</h3>
+    </div>
+    <div class="principles-grid">
+      <div class="principle-card reveal delay-1">
+        <div class="principle-number">Nguyên tắc 01</div>
+        <h4>Xã hội quy định cá nhân</h4>
+        <p>Điều kiện kinh tế–xã hội tạo ra môi trường hình thành nhân cách, năng lực và hành vi của mỗi cá nhân.</p>
+      </div>
+      <div class="principle-card reveal delay-2">
+        <div class="principle-number">Nguyên tắc 02</div>
+        <h4>Cá nhân sáng tạo lịch sử</h4>
+        <p>Cá nhân không thụ động — họ chủ động tác động ngược lại xã hội thông qua lao động, sáng tạo và đấu tranh.</p>
+      </div>
+      <div class="principle-card reveal delay-3">
+        <div class="principle-number">Nguyên tắc 03</div>
+        <h4>Không có đối lập tuyệt đối</h4>
+        <p>Lợi ích cá nhân và xã hội không đối lập tuyệt đối — phải tìm điểm hài hòa trong từng hoàn cảnh lịch sử cụ thể.</p>
+      </div>
+      <div class="principle-card reveal delay-4">
+        <div class="principle-number">Nguyên tắc 04</div>
+        <h4>Con người là tổng hòa quan hệ</h4>
+        <p>Mác: "Bản chất con người không phải là cái trừu tượng — mà là tổng hòa các quan hệ xã hội."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 4: QUẦN CHÚNG & LÃNH TỤ
+     ═══════════════════════════════════════ -->
+<section id="quan-chung-lanh-tu">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-tag">👑 Nội dung 2</span>
+      <h2 class="section-heading">Quần chúng nhân dân <span>& Lãnh tụ</span></h2>
+      <div class="section-divider"></div>
+      <p class="section-desc">
+        Quần chúng nhân dân là lực lượng quyết định sự phát triển của lịch sử. Lãnh tụ có vai trò quan trọng — nhưng không thể thay thế quần chúng.
+      </p>
+    </div>
+
+    <!-- Vai trò quần chúng -->
+    <div class="reveal" style="margin-top:3rem;">
+      <h3 style="font-size:1.3rem;font-weight:700;margin-bottom:0.3rem;">Vai trò của Quần chúng nhân dân</h3>
+      <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:2rem;">Lực lượng sáng tạo ra lịch sử theo quan điểm Mác–Lênin</p>
+    </div>
+    <div class="roles-grid">
+      <div class="role-card reveal delay-1">
+        <span class="role-icon">⚙️</span>
+        <h4>Sản xuất vật chất</h4>
+        <p>Là lực lượng sản xuất cơ bản, tạo ra của cải vật chất — nền tảng của toàn bộ đời sống xã hội.</p>
+      </div>
+      <div class="role-card reveal delay-2">
+        <span class="role-icon">⚔️</span>
+        <h4>Đấu tranh cách mạng</h4>
+        <p>Là lực lượng chủ yếu trong các cuộc cách mạng xã hội — thay đổi quan hệ sản xuất lỗi thời.</p>
+      </div>
+      <div class="role-card reveal delay-3">
+        <span class="role-icon">🎨</span>
+        <h4>Sáng tạo văn hóa</h4>
+        <p>Tạo ra và lưu truyền các giá trị văn hóa, tinh thần — là gốc rễ của nền văn minh nhân loại.</p>
+      </div>
+    </div>
+
+    <!-- So sánh Lãnh tụ -->
+    <div class="compare-section">
+      <div class="reveal">
+        <h3 style="font-size:1.3rem;font-weight:700;margin-bottom:0.3rem;">Vai trò của Lãnh tụ</h3>
+        <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:2rem;">Phân biệt lãnh tụ chân chính và độc đoán</p>
+      </div>
+      <div class="compare-grid">
+        <div class="compare-card positive reveal-left delay-1">
+          <div class="compare-header">
+            <span style="font-size:1.8rem;">🌟</span>
+            <span class="compare-label red">Lãnh tụ chân chính (Mác–Lênin)</span>
+          </div>
+          <ul class="compare-list">
+            <li><span class="check">✓</span> Thấu hiểu nguyện vọng của quần chúng</li>
+            <li><span class="check">✓</span> Định hướng, tập hợp và phát huy sức mạnh tập thể</li>
+            <li><span class="check">✓</span> Chịu trách nhiệm trước nhân dân</li>
+            <li><span class="check">✓</span> Học hỏi từ thực tiễn quần chúng</li>
+            <li><span class="check">✓</span> Hy sinh lợi ích cá nhân cho tập thể</li>
+          </ul>
+        </div>
+        <div class="compare-card negative reveal-right delay-2">
+          <div class="compare-header">
+            <span style="font-size:1.8rem;">⚠️</span>
+            <span class="compare-label gray">Kẻ độc đoán / Sùng bái cá nhân</span>
+          </div>
+          <ul class="compare-list">
+            <li><span class="cross">✗</span> Áp đặt ý chí cá nhân lên tập thể</li>
+            <li><span class="cross">✗</span> Xem thường vai trò của quần chúng</li>
+            <li><span class="cross">✗</span> Đổ lỗi cho người khác khi thất bại</li>
+            <li><span class="cross">✗</span> Tự cho mình luôn đúng, không lắng nghe</li>
+            <li><span class="cross">✗</span> Đặt lợi ích cá nhân lên trên tập thể</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="verdict-box reveal" style="margin-top:2rem;">
+        <span class="verdict-icon">💡</span>
+        <div>
+          <h4>Quan điểm cốt lõi của Mác–Lênin</h4>
+          <p>Lãnh tụ vĩ đại không phải vì họ tài năng hơn người, mà vì họ <strong style="color:var(--gold)">thấu hiểu và đại diện cho ý chí của quần chúng nhân dân</strong>. Lãnh tụ xuất hiện khi có nhu cầu của lịch sử và quần chúng — không phải tự nhiên mà thành.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 5: TÌNH HUỐNG CLB (VIDEO TƯƠNG TÁC)
+     ═══════════════════════════════════════ -->
+<section id="tinh-huong">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-tag">🎬 Sản phẩm sáng tạo · Video Tương Tác</span>
+      <h2 class="section-heading"><span>Hào quang</span> hay Tập thể?</h2>
+      <div class="section-divider"></div>
+      <p class="section-desc">
+        Khi video dừng tại điểm quyết định — <strong style="color:var(--gold)">bấm phím 1 hoặc 2</strong> để chọn hướng giải quyết và xem hậu quả!
+      </p>
+    </div>
+
+    <!-- ── INTERACTIVE VIDEO PLAYER ── -->
+    <div class="interactive-video-wrapper reveal" style="margin-top:2.5rem;">
+
+      <!-- Stats HUD -->
+      <div class="stats-hud" id="stats-hud">
+        <div class="stat-hud-item">
+          <span class="stat-hud-label">TÍN NHIỆM</span>
+          <div class="stat-hud-track">
+            <div class="stat-hud-fill trust" id="bar-trust" style="width:50%"></div>
+          </div>
+          <span class="stat-hud-val" id="val-trust">50</span>
+        </div>
+        <div class="stat-hud-item">
+          <span class="stat-hud-label">TINH THẦN</span>
+          <div class="stat-hud-track">
+            <div class="stat-hud-fill morale" id="bar-morale" style="width:50%"></div>
+          </div>
+          <span class="stat-hud-val" id="val-morale">50</span>
+        </div>
+        <div class="stat-hud-item">
+          <span class="stat-hud-label">ÁP LỰC</span>
+          <div class="stat-hud-track">
+            <div class="stat-hud-fill burnout" id="bar-burnout" style="width:20%"></div>
+          </div>
+          <span class="stat-hud-val" id="val-burnout">20</span>
+        </div>
+        <div class="stat-hud-item">
+          <span class="stat-hud-label">ĐOÀN KẾT</span>
+          <div class="stat-hud-track">
+            <div class="stat-hud-fill power" id="bar-power" style="width:50%"></div>
+          </div>
+          <span class="stat-hud-val" id="val-power">50</span>
+        </div>
+      </div>
+
+      <!-- Video -->
+      <div class="interactive-video-container" id="iv-container">
+        <video id="scenario-video" preload="metadata">
+          <source src="assets/video/tinh-huong.mp4" type="video/mp4" />
+        </video>
+
+        <!-- Initial overlay before play -->
+        <div class="video-overlay" id="video-overlay">
+          <button class="video-play-btn" id="play-btn" aria-label="Phát video">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="white" stroke-width="1.5"/><path d="M10 8.5L16 12L10 15.5V8.5Z" fill="white"/></svg>
+          </button>
+          <p class="video-overlay-text">🎬 Hào quang hay Tập thể? · Nhấn để bắt đầu</p>
+        </div>
+
+        <!-- Decision overlay (hidden until triggered) -->
+        <div class="decision-overlay" id="decision-overlay" style="display:none;">
+          <div class="decision-inner">
+            <div class="decision-tag" id="decision-tag">Quyết định 1</div>
+            <p class="decision-question" id="decision-question">BẠN LÀ CƯỜNG. BẠN SẼ CHỌN GÌ?</p>
+            <div class="decision-choices">
+              <div class="choice-card" id="choice-1">
+                <span class="choice-key">[1]</span>
+                <p class="choice-text" id="choice-1-text">—</p>
+                <span class="choice-sub" id="choice-1-sub">—</span>
+              </div>
+              <div class="choice-card" id="choice-2">
+                <span class="choice-key">[2]</span>
+                <p class="choice-text" id="choice-2-text">—</p>
+                <span class="choice-sub" id="choice-2-sub">—</span>
+              </div>
+            </div>
+            <p class="decision-hint">⌨️ Nhấn phím <strong>1</strong> hoặc <strong>2</strong> để chọn</p>
+          </div>
+        </div>
+
+        <!-- Result flash overlay -->
+        <div class="result-overlay" id="result-overlay" style="display:none;">
+          <div class="result-inner">
+            <div class="result-choice-badge" id="result-badge">Lựa chọn 1</div>
+            <p class="result-choice-text" id="result-text">—</p>
+            <div class="result-stats" id="result-stats"></div>
+            <p class="result-resume">▶ Video sẽ tiếp tục sau 3 giây...</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video controls bar -->
+      <div class="iv-controls">
+        <button class="iv-btn" id="iv-play-pause">⏸ Tạm dừng</button>
+        <div class="iv-progress-wrap">
+          <div class="iv-progress-bar" id="iv-progress-bar"></div>
+          <!-- Decision markers -->
+          <div class="iv-marker" id="marker-0" style="left:calc(41/254*100%)" title="Quyết định 1"></div>
+          <div class="iv-marker" id="marker-1" style="left:calc(89/254*100%)" title="Quyết định 2"></div>
+          <div class="iv-marker" id="marker-2" style="left:calc(131/254*100%)" title="Quyết định 3"></div>
+        </div>
+        <span class="iv-time" id="iv-time">0:00 / 4:14</span>
+      </div>
+    </div>
+
+    <!-- Scenario text -->
+    <div class="scenario-box reveal" style="margin-top:3rem;">
+      <p class="scenario-text">
+        Một CLB sinh viên tổ chức chiến dịch tình nguyện lớn. <strong>Trưởng nhóm C</strong> rất nổi tiếng trên mạng, được xem như <strong>"thần tượng"</strong> của chương trình. C thường tự quyết định mọi việc vì tin rằng mình có tầm nhìn tốt hơn. Các thành viên bắt đầu cảm thấy <strong>bị xem nhẹ</strong>, chỉ làm theo lệnh. Khi chiến dịch gặp sự cố (thiếu kinh phí, tổ chức kém), C đổ lỗi cho <strong>"đội ngũ không đủ năng lực"</strong> — còn các thành viên cho rằng C độc đoán.
+      </p>
+    </div>
+
+    <!-- Analysis -->
+    <div class="reveal" style="margin-top:3rem;">
+      <h3 style="font-size:1.3rem;font-weight:700;margin-bottom:0.3rem;">Phân tích theo Triết học Mác–Lênin</h3>
+      <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:2rem;">3 góc nhìn từ lý thuyết</p>
+    </div>
+    <div class="analysis-grid">
+      <div class="analysis-card reveal delay-1">
+        <div class="analysis-number">1</div>
+        <h4>Quan hệ cá nhân – tập thể</h4>
+        <p>C (cá nhân) đặt bản thân cao hơn tập thể. Vi phạm nguyên tắc: <em>cá nhân phải gắn bó và tôn trọng xã hội/tập thể</em> — không thể phát triển bền vững nếu tách rời tập thể.</p>
+      </div>
+      <div class="analysis-card reveal delay-2">
+        <div class="analysis-number">2</div>
+        <h4>C có phải "lãnh tụ" không?</h4>
+        <p>Theo Mác–Lênin: <strong>Không.</strong> C có sức ảnh hưởng nhưng không thấu hiểu quần chúng, không đại diện cho ý chí tập thể, không chịu trách nhiệm — chỉ là người độc đoán có danh tiếng.</p>
+      </div>
+      <div class="analysis-card reveal delay-3">
+        <div class="analysis-number">3</div>
+        <h4>Vì sao chiến dịch thất bại?</h4>
+        <p>Vì phủ nhận sức mạnh tập thể — quần chúng không được phát huy vai trò. Khi thiếu sự tham gia chủ động của tập thể, dù lãnh đạo có tài giỏi đến đâu cũng sẽ thất bại.</p>
+      </div>
+    </div>
+
+    <div class="verdict-box reveal">
+      <span class="verdict-icon">⚖️</span>
+      <div>
+        <h4>Kết luận phân tích</h4>
+        <p>Thất bại của chiến dịch là bài học về <strong style="color:var(--gold)">mối quan hệ biện chứng giữa cá nhân và tập thể</strong>. Một "lãnh tụ" thật sự phải biết dựa vào sức mạnh quần chúng, không phủ nhận nó. Sức mạnh của tập thể luôn lớn hơn bất kỳ cá nhân nào.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 6: LIÊN HỆ VIỆT NAM
+     ═══════════════════════════════════════ -->
+<section id="viet-nam">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-tag">🇻🇳 Nội dung 3 · Liên hệ thực tiễn</span>
+      <h2 class="section-heading">Con người trong <span>Cách mạng Việt Nam</span></h2>
+      <div class="section-divider"></div>
+      <p class="section-desc">
+        Triết học Mác–Lênin về con người được thể hiện sinh động trong lịch sử cách mạng và sự nghiệp xây dựng đất nước Việt Nam.
+      </p>
+    </div>
+
+    <!-- Bác Hồ highlight -->
+    <div class="vn-highlight reveal">
+      <div class="vn-avatar">🕊️</div>
+      <div class="vn-content">
+        <h3>Chủ tịch Hồ Chí Minh</h3>
+        <div class="subtitle">Minh chứng sống động nhất về lãnh tụ gắn bó với quần chúng</div>
+        <p>
+          Bác Hồ là hiện thân của quan điểm Mác–Lênin về lãnh tụ chân chính: không xa rời quần chúng nhân dân, luôn học hỏi từ thực tiễn, đặt lợi ích dân tộc và nhân dân lên trên hết. Câu nói "<strong>Việc gì có lợi cho dân, ta phải hết sức làm</strong>" là minh chứng rõ nhất.
+        </p>
+      </div>
+    </div>
+
+    <!-- Lessons -->
+    <div class="reveal" style="margin-top:3rem;">
+      <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:0.5rem;">Bài học cho sinh viên FPT hôm nay</h3>
+    </div>
+    <div class="lessons-grid">
+      <div class="lesson-card reveal delay-1">
+        <div class="lesson-icon">🤝</div>
+        <h4>Làm việc nhóm hiệu quả</h4>
+        <p>Mỗi thành viên là một cá nhân — nhưng sức mạnh nhóm chỉ xuất hiện khi mọi người gắn kết, lắng nghe và tôn trọng nhau.</p>
+      </div>
+      <div class="lesson-card reveal delay-2">
+        <div class="lesson-icon">🧭</div>
+        <h4>Lãnh đạo đúng nghĩa</h4>
+        <p>Leader không phải người ra lệnh — mà là người định hướng, truyền cảm hứng và phát huy điểm mạnh của từng thành viên.</p>
+      </div>
+      <div class="lesson-card reveal delay-3">
+        <div class="lesson-icon">⚖️</div>
+        <h4>Cân bằng cá nhân – tập thể</h4>
+        <p>Phát triển bản thân nhưng không quên đóng góp cho tập thể. Thành công cá nhân bền vững khi được xây dựng trên nền tảng tập thể.</p>
+      </div>
+    </div>
+
+    <!-- Quote -->
+    <div class="reveal" style="margin-top:3rem;">
+      <blockquote class="famous-quote">
+        <p>"Dễ trăm lần không dân cũng chịu. Khó vạn lần dân liệu cũng xong."</p>
+        <cite>— Hồ Chí Minh</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 7: KẾT LUẬN
+     ═══════════════════════════════════════ -->
+<section id="ket-luan">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-tag">💡 Tổng kết</span>
+      <h2 class="section-heading"><span>Kết luận</span> & Bài học</h2>
+      <div class="section-divider"></div>
+      <p class="section-desc">
+        Ba bài học cốt lõi từ nội dung hôm nay — áp dụng được ngay vào cuộc sống sinh viên.
+      </p>
+    </div>
+
+    <div class="conclusion-grid">
+      <div class="conclusion-card reveal delay-1">
+        <div class="conclusion-num">01</div>
+        <h4>Cá nhân & Xã hội là một thể thống nhất</h4>
+        <p>Không có cá nhân nào phát triển thật sự bên ngoài xã hội. Tôn trọng tập thể là điều kiện để cá nhân phát triển bền vững.</p>
+      </div>
+      <div class="conclusion-card reveal delay-2">
+        <div class="conclusion-num">02</div>
+        <h4>Quần chúng là lực lượng tạo nên lịch sử</h4>
+        <p>Mọi thành tựu vĩ đại đều là kết quả của sức mạnh tập thể, không phải của một cá nhân — dù cá nhân đó có tài giỏi đến đâu.</p>
+      </div>
+      <div class="conclusion-card reveal delay-3">
+        <div class="conclusion-num">03</div>
+        <h4>Lãnh tụ chân chính phải gắn bó với quần chúng</h4>
+        <p>Lãnh đạo giỏi là người biết lắng nghe, phát huy sức mạnh tập thể và chịu trách nhiệm — không phải người chỉ ra lệnh và đổ lỗi.</p>
+      </div>
+    </div>
+
+    <!-- References -->
+    <div class="references reveal">
+      <h3>📚 Tài liệu tham khảo</h3>
+      <ul class="ref-list">
+        <li data-num="1">Giáo trình Triết học Mác–Lênin (2019), NXB Chính trị Quốc gia Sự thật, tr.257–272.</li>
+        <li data-num="2">Giáo trình Triết học Mác–Lênin (2021), tr.465–489.</li>
+        <li data-num="3">Hồ Chí Minh Toàn tập, NXB Chính trị Quốc gia Sự thật.</li>
+        <li data-num="4">marxists.org/xlang/index.htm – Tài liệu tham khảo tiếng Anh.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 8: Q&A SLIDE
+     ═══════════════════════════════════════ -->
+<section id="qa">
+  <!-- Animated rings background -->
+  <div class="qa-rings">
+    <div class="qa-ring"></div>
+    <div class="qa-ring"></div>
+    <div class="qa-ring"></div>
+    <div class="qa-ring"></div>
+  </div>
+  <div class="qa-glow"></div>
+
+  <div class="qa-content reveal">
+    <!-- Nhóm phản biện badges -->
+    <div class="qa-group-badges">
+      <span class="qa-group-badge">Nhóm phản biện:</span>
+      <span class="qa-group-badge">Nhóm 7</span>
+      <span class="qa-group-badge">Nhóm 1</span>
+      <span class="qa-group-badge">Nhóm 2</span>
+      <span class="qa-group-badge">Nhóm 3</span>
+    </div>
+
+    <span class="qa-eyebrow">Phần phản biện</span>
+
+    <span class="qa-big-text">Q&amp;A</span>
+
+    <p class="qa-subtitle">Hỏi &amp; Đáp</p>
+
+    <div class="qa-divider"></div>
+
+    <p class="qa-desc">
+      Nhóm 6 sẵn sàng lắng nghe và trả lời các câu hỏi từ nhóm phản biện và toàn thể lớp.
+    </p>
+
+    <div class="qa-groups">
+      <div class="qa-group-chip">
+        <span class="chip-label">Thuyết trình</span>
+        <span class="chip-value">Nhóm 6</span>
+      </div>
+      <div class="qa-group-chip">
+        <span class="chip-label">Phản biện</span>
+        <span class="chip-value">Nhóm 7</span>
+      </div>
+      <div class="qa-group-chip">
+        <span class="chip-label">Phản biện</span>
+        <span class="chip-value">Nhóm 1</span>
+      </div>
+      <div class="qa-group-chip">
+        <span class="chip-label">Phản biện</span>
+        <span class="chip-value">Nhóm 2</span>
+      </div>
+      <div class="qa-group-chip">
+        <span class="chip-label">Phản biện</span>
+        <span class="chip-value">Nhóm 3</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════ -->
+<footer>
+  <p>MLN111 · Triết học Mác–Lênin · <span>Nhóm 6</span> · ĐH FPT HCM · 2025</p>
+  <p style="margin-top:0.4rem;font-size:0.78rem;">Chương 3 – Phần V: Triết học về con người</p>
+</footer>
+
+<script src="scripts/main.js"></script>
+</body>
+</html>
