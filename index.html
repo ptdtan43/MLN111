@@ -81,8 +81,8 @@
         </div>
 
         <div class="hero-cta">
-          <a href="#boi-canh" class="btn-primary" id="btn-start">
-            ▶ Bắt đầu thuyết trình
+          <a href="#tinh-huong" class="btn-primary" id="btn-start">
+            ▶ Bắt đầu với video trung tâm
           </a>
           <a href="#qa" class="btn-secondary" id="btn-qa">
             💬 Đến phần Q&A
@@ -443,7 +443,36 @@
               <div class="result-choice-badge" id="result-badge">Lựa chọn 1</div>
               <p class="result-choice-text" id="result-text">—</p>
               <div class="result-stats" id="result-stats"></div>
-              <p class="result-resume">▶ Video sẽ tiếp tục sau 3 giây...</p>
+              <p class="result-resume">▶ Video sẽ tiếp tục sau khi cập nhật chỉ số...</p>
+            </div>
+          </div>
+
+          <!-- Final effect overlay: Celebration / Failure -->
+          <div class="final-effect-overlay" id="final-effect-overlay" style="display:none;">
+            <div class="final-effect-inner">
+              <div class="final-effect-icon" id="final-effect-icon">🎉</div>
+              <h2 id="final-effect-title">Tập thể đã chiến thắng</h2>
+              <p id="final-effect-message">
+                Áp lực đã về 0. Cường đã biết tin tưởng và phát huy sức mạnh tập thể.
+              </p>
+            </div>
+          </div>
+
+          <!-- Presentation theory overlay: used to pause the video and explain Tiết 52 / Tiết 53 -->
+          <div class="theory-overlay" id="theory-overlay" style="display:none;">
+            <div class="theory-inner">
+              <div class="theory-tag" id="theory-tag">Tiết 52</div>
+              <h3 class="theory-title" id="theory-title">—</h3>
+              <ul class="theory-points" id="theory-points"></ul>
+              <div class="theory-cards" id="theory-cards" style="display:none;"></div>
+              <div class="theory-script" id="theory-script">—</div>
+              <div class="theory-actions">
+                <button class="theory-btn primary" id="theory-continue">Tiếp tục video</button>
+                <button class="theory-btn ghost" id="theory-secondary" style="display:none;">Xem phần Tiết 53 bên
+                  dưới</button>
+              </div>
+              <p class="theory-hint">Gợi ý trình bày: màn hình chỉ hiện ý chính, người thuyết trình nói theo phần
+                script.</p>
             </div>
           </div>
         </div>
@@ -454,11 +483,11 @@
           <div class="iv-progress-wrap">
             <div class="iv-progress-bar" id="iv-progress-bar"></div>
             <!-- Decision markers -->
-            <div class="iv-marker" id="marker-0" style="left:calc(41/254*100%)" title="Quyết định 1"></div>
-            <div class="iv-marker" id="marker-1" style="left:calc(89/254*100%)" title="Quyết định 2"></div>
-            <div class="iv-marker" id="marker-2" style="left:calc(131/254*100%)" title="Quyết định 3"></div>
+            <div class="iv-marker" id="marker-0" style="left:calc(45/245*100%)" title="Quyết định 1"></div>
+            <div class="iv-marker" id="marker-1" style="left:calc(90/245*100%)" title="Quyết định 2"></div>
+            <div class="iv-marker" id="marker-2" style="left:calc(135/245*100%)" title="Quyết định 3"></div>
           </div>
-          <span class="iv-time" id="iv-time">0:00 / 4:14</span>
+          <span class="iv-time" id="iv-time">0:00 / 4:05</span>
         </div>
       </div>
 
