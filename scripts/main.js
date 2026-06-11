@@ -3,7 +3,6 @@
    Nhóm 6 | ĐH FPT HCM
    =================================== */
 
-<<<<<<< HEAD
 /* ── 0a. SCROLL TO TOP ON LOAD/REFRESH ─ */
 // Prevent browser from restoring previous scroll position
 if (history.scrollRestoration) {
@@ -36,9 +35,6 @@ window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
 document.addEventListener('DOMContentLoaded', () => {
 
 
-=======
-document.addEventListener("DOMContentLoaded", () => {
->>>>>>> main
   /* ── 1. SCROLL PROGRESS BAR ────────── */
   const progressBar = document.getElementById("progress-bar");
   window.addEventListener(
