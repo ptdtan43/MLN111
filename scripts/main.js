@@ -3,7 +3,38 @@
    Nhóm 6 | ĐH FPT HCM
    =================================== */
 
-document.addEventListener("DOMContentLoaded", () => {
+/* ── 0a. SCROLL TO TOP ON LOAD/REFRESH ─ */
+// Prevent browser from restoring previous scroll position
+if (history.scrollRestoration) {
+  history.scrollRestoration = 'manual';
+}
+window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+
+/* ── 0b. INTRO SPLASH SCREEN ────────── */
+(function () {
+  const overlay = document.getElementById('intro-overlay');
+  if (!overlay) return;
+
+  // Lock body scroll while intro is showing
+  document.body.style.overflow = 'hidden';
+
+  // After animations complete (~4.3s), trigger slide-up exit
+  const EXIT_DELAY = 4300; // ms
+
+  setTimeout(() => {
+    overlay.classList.add('intro-exit');
+
+    // After exit animation finishes, fully remove from flow
+    overlay.addEventListener('transitionend', () => {
+      overlay.classList.add('intro-hidden');
+      document.body.style.overflow = '';
+    }, { once: true });
+  }, EXIT_DELAY);
+})();
+
+document.addEventListener('DOMContentLoaded', () => {
+
+
   /* ── 1. SCROLL PROGRESS BAR ────────── */
   const progressBar = document.getElementById("progress-bar");
   window.addEventListener(
