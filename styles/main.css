@@ -24,10 +24,12 @@
   --text-muted: #606080;
   --gradient-red: linear-gradient(135deg, #c0392b, #e74c3c);
   --gradient-gold: linear-gradient(135deg, #f39c12, #f8c471);
-  --gradient-hero: linear-gradient(135deg,
-      #080810 0%,
-      #1a0a0a 50%,
-      #0a0810 100%);
+  --gradient-hero: linear-gradient(
+    135deg,
+    #080810 0%,
+    #1a0a0a 50%,
+    #0a0810 100%
+  );
   --shadow-red: 0 0 40px rgba(192, 57, 43, 0.3);
   --shadow-gold: 0 0 30px rgba(243, 156, 18, 0.25);
   --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -137,7 +139,6 @@ body {
   filter: drop-shadow(0 0 10px rgba(243, 156, 18, 0.6));
 }
 
-
 .nav-title {
   font-size: 0.9rem;
   font-weight: 600;
@@ -185,7 +186,8 @@ body {
   justify-content: center;
   background: var(--bg-dark);
   overflow: hidden;
-  transition: transform 0.9s cubic-bezier(0.76, 0, 0.24, 1),
+  transition:
+    transform 0.9s cubic-bezier(0.76, 0, 0.24, 1),
     opacity 0.6s ease;
 }
 
@@ -201,12 +203,20 @@ body {
 
 /* Subtle radial glow background */
 #intro-overlay::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 70% 60% at 50% 40%, rgba(192, 57, 43, 0.18) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 30% at 80% 80%, rgba(243, 156, 18, 0.08) 0%, transparent 60%);
+    radial-gradient(
+      ellipse 70% 60% at 50% 40%,
+      rgba(192, 57, 43, 0.18) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 40% 30% at 80% 80%,
+      rgba(243, 156, 18, 0.08) 0%,
+      transparent 60%
+    );
   pointer-events: none;
 }
 
@@ -229,7 +239,8 @@ body {
   background-clip: text;
   display: block;
   margin-bottom: 1.2rem;
-  animation: introEmblemIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both,
+  animation:
+    introEmblemIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both,
     introEmblemGlow 2.5s ease-in-out 0.8s infinite alternate;
   filter: drop-shadow(0 0 20px rgba(192, 57, 43, 0.6));
 }
@@ -585,7 +596,6 @@ section {
 }
 
 @keyframes pulse-border {
-
   0%,
   100% {
     box-shadow: 0 0 0 0 rgba(192, 57, 43, 0.4);
@@ -605,7 +615,6 @@ section {
 }
 
 @keyframes blink {
-
   0%,
   100% {
     opacity: 1;
@@ -833,7 +842,6 @@ section {
 }
 
 @keyframes bounce {
-
   0%,
   100% {
     transform: translateX(-50%) translateY(0);
@@ -1533,9 +1541,11 @@ section {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle,
-      rgba(192, 57, 43, 0.06) 0%,
-      transparent 60%);
+  background: radial-gradient(
+    circle,
+    rgba(192, 57, 43, 0.06) 0%,
+    transparent 60%
+  );
   transition: var(--transition);
   opacity: 0;
 }
@@ -1669,7 +1679,6 @@ section {
 }
 
 @keyframes ring-pulse {
-
   0%,
   100% {
     transform: scale(1);
@@ -1688,14 +1697,15 @@ section {
   width: 400px;
   height: 400px;
   border-radius: 50%;
-  background: radial-gradient(circle,
-      rgba(192, 57, 43, 0.15) 0%,
-      transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(192, 57, 43, 0.15) 0%,
+    transparent 70%
+  );
   animation: glow-breathe 3s ease-in-out infinite;
 }
 
 @keyframes glow-breathe {
-
   0%,
   100% {
     transform: scale(1);
@@ -1759,7 +1769,6 @@ section {
 }
 
 @keyframes qa-float {
-
   0%,
   100% {
     transform: translateY(0);
@@ -2304,6 +2313,245 @@ footer span {
   font-variant-numeric: tabular-nums;
 }
 
+/* ===================================
+   THEORY OVERLAY - CONTENT ON VIDEO
+   Bắt buộc để bài học hiện đè lên video
+   =================================== */
+
+.theory-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 80 !important;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(192, 57, 43, 0.18),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(243, 156, 18, 0.14),
+      transparent 35%
+    ),
+    rgba(6, 6, 12, 0.92);
+
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  overflow: hidden;
+}
+
+.theory-inner {
+  width: min(92%, 980px);
+  max-height: 88vh;
+  overflow-y: auto;
+
+  background: rgba(15, 15, 27, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  padding: 2rem;
+
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.55),
+    0 0 35px rgba(192, 57, 43, 0.18);
+
+  animation: theoryPop 0.35s ease forwards;
+}
+
+.theory-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  background: rgba(192, 57, 43, 0.16);
+  border: 1px solid rgba(192, 57, 43, 0.35);
+  color: var(--red-light);
+
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+.theory-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 2.15rem);
+  line-height: 1.25;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.theory-points {
+  list-style: none;
+  display: grid;
+  gap: 0.65rem;
+  margin: 1rem 0 1.25rem;
+}
+
+.theory-points li {
+  position: relative;
+  padding-left: 1.45rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.theory-points li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--gold);
+  font-weight: 900;
+}
+
+.theory-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin: 1.2rem 0;
+}
+
+.theory-mini-card {
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.theory-mini-icon {
+  display: inline-flex;
+  font-size: 1.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.theory-mini-card strong {
+  display: block;
+  color: var(--gold);
+  font-size: 0.9rem;
+  margin-bottom: 0.35rem;
+}
+
+.theory-mini-card p {
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.theory-script {
+  margin-top: 1.2rem;
+  padding: 1rem 1.1rem;
+  border-left: 4px solid var(--gold);
+  border-radius: 0 14px 14px 0;
+
+  background: rgba(243, 156, 18, 0.08);
+  color: var(--text-secondary);
+
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+
+.theory-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  margin-top: 1.4rem;
+}
+
+.theory-btn {
+  border: none;
+  cursor: pointer;
+  border-radius: 999px;
+  padding: 0.75rem 1.35rem;
+
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 800;
+
+  transition: var(--transition);
+}
+
+.theory-btn.primary {
+  color: white;
+  background: var(--gradient-red);
+  box-shadow: 0 10px 28px rgba(192, 57, 43, 0.35);
+}
+
+.theory-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(192, 57, 43, 0.48);
+}
+
+.theory-btn.ghost {
+  color: var(--gold);
+  background: rgba(243, 156, 18, 0.08);
+  border: 1px solid rgba(243, 156, 18, 0.24);
+}
+
+.theory-btn.ghost:hover {
+  background: rgba(243, 156, 18, 0.14);
+}
+
+.theory-hint {
+  margin-top: 0.85rem;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+/* Đảm bảo các overlay khác không đè theory */
+.video-overlay {
+  z-index: 20;
+}
+
+.decision-overlay {
+  z-index: 60;
+}
+
+.result-overlay {
+  z-index: 65;
+}
+
+.final-effect-overlay {
+  z-index: 75;
+}
+
+@keyframes theoryPop {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .theory-inner {
+    width: 96%;
+    padding: 1.25rem;
+  }
+
+  .theory-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .theory-points li,
+  .theory-script {
+    font-size: 0.85rem;
+  }
+}
+
 /* Animations */
 @keyframes fadeIn {
   from {
@@ -2434,10 +2682,12 @@ footer span {
 
 .game-preview-card {
   position: relative;
-  background: linear-gradient(135deg,
-      rgba(255, 95, 162, 0.12) 0%,
-      rgba(255, 216, 92, 0.08) 50%,
-      rgba(110, 223, 195, 0.1) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 95, 162, 0.12) 0%,
+    rgba(255, 216, 92, 0.08) 50%,
+    rgba(110, 223, 195, 0.1) 100%
+  );
   border: 1px solid rgba(255, 95, 162, 0.25);
   border-radius: 28px;
   padding: 3rem 3.5rem;
@@ -2450,28 +2700,32 @@ footer span {
 }
 
 .game-preview-card::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   border-radius: 28px;
-  background: linear-gradient(135deg,
-      rgba(255, 95, 162, 0.06),
-      rgba(255, 216, 92, 0.04));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 95, 162, 0.06),
+    rgba(255, 216, 92, 0.04)
+  );
   pointer-events: none;
 }
 
 .game-preview-card::after {
-  content: '';
+  content: "";
   position: absolute;
   top: -2px;
   left: -2px;
   right: -2px;
   bottom: -2px;
   border-radius: 30px;
-  background: linear-gradient(135deg,
-      rgba(255, 95, 162, 0.5),
-      rgba(255, 216, 92, 0.4),
-      rgba(110, 223, 195, 0.4));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 95, 162, 0.5),
+    rgba(255, 216, 92, 0.4),
+    rgba(110, 223, 195, 0.4)
+  );
   z-index: -1;
   opacity: 0;
   transition: opacity 0.4s ease;
@@ -2483,7 +2737,9 @@ footer span {
 
 .game-preview-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 60px rgba(255, 95, 162, 0.2), 0 0 40px rgba(255, 216, 92, 0.1);
+  box-shadow:
+    0 20px 60px rgba(255, 95, 162, 0.2),
+    0 0 40px rgba(255, 216, 92, 0.1);
   border-color: rgba(255, 95, 162, 0.45);
 }
 
@@ -2497,7 +2753,6 @@ footer span {
 }
 
 @keyframes floatIcons {
-
   0%,
   100% {
     transform: translateY(0);
@@ -2579,25 +2834,31 @@ footer span {
 }
 
 @keyframes gamePulse {
-
   0%,
   100% {
     box-shadow: 0 8px 30px rgba(255, 95, 162, 0.45);
   }
 
   50% {
-    box-shadow: 0 12px 45px rgba(255, 95, 162, 0.7), 0 0 20px rgba(255, 216, 92, 0.3);
+    box-shadow:
+      0 12px 45px rgba(255, 95, 162, 0.7),
+      0 0 20px rgba(255, 216, 92, 0.3);
   }
 }
 
 .btn-game::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
   transition: left 0.5s ease;
 }
 

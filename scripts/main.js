@@ -6,35 +6,37 @@
 /* ── 0a. SCROLL TO TOP ON LOAD/REFRESH ─ */
 // Prevent browser from restoring previous scroll position
 if (history.scrollRestoration) {
-  history.scrollRestoration = 'manual';
+  history.scrollRestoration = "manual";
 }
-window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+window.scrollTo({ top: 0, left: 0, behavior: "instant" });
 
 /* ── 0b. INTRO SPLASH SCREEN ────────── */
 (function () {
-  const overlay = document.getElementById('intro-overlay');
+  const overlay = document.getElementById("intro-overlay");
   if (!overlay) return;
 
   // Lock body scroll while intro is showing
-  document.body.style.overflow = 'hidden';
+  document.body.style.overflow = "hidden";
 
   // After animations complete (~4.3s), trigger slide-up exit
   const EXIT_DELAY = 4300; // ms
 
   setTimeout(() => {
-    overlay.classList.add('intro-exit');
+    overlay.classList.add("intro-exit");
 
     // After exit animation finishes, fully remove from flow
-    overlay.addEventListener('transitionend', () => {
-      overlay.classList.add('intro-hidden');
-      document.body.style.overflow = '';
-    }, { once: true });
+    overlay.addEventListener(
+      "transitionend",
+      () => {
+        overlay.classList.add("intro-hidden");
+        document.body.style.overflow = "";
+      },
+      { once: true },
+    );
   }, EXIT_DELAY);
 })();
 
-document.addEventListener('DOMContentLoaded', () => {
-
-
+document.addEventListener("DOMContentLoaded", () => {
   /* ── 1. SCROLL PROGRESS BAR ────────── */
   const progressBar = document.getElementById("progress-bar");
   window.addEventListener(
@@ -678,11 +680,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const tContinue = document.getElementById("theory-continue");
     const tSecondary = document.getElementById("theory-secondary");
 
-    if (!tOverlay) return;
+    if (!tOverlay) {
+      console.error("Không tìm thấy #theory-overlay trong HTML");
+      return;
+    }
 
+    // Set trạng thái trước để các event pause/play không hiện overlay khác đè lên
     presentationActive = true;
-    video.pause();
     hideMainOverlay();
+
+    // Ép overlay bài học hiện lên rõ ràng
+    tOverlay.style.display = "flex";
+    tOverlay.style.opacity = "1";
+    tOverlay.style.visibility = "visible";
+    tOverlay.style.pointerEvents = "auto";
+    tOverlay.style.zIndex = "80";
+
+    // Dừng video sau khi overlay đã được bật
+    video.pause();
 
     if (tTag) tTag.textContent = data.tag || "Phân tích";
     if (tTitle) tTitle.textContent = data.title || "—";
@@ -698,16 +713,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (tCards) {
       tCards.innerHTML = "";
+
       if (data.cards && data.cards.length) {
         tCards.style.display = "grid";
         data.cards.forEach((card) => {
           const div = document.createElement("div");
           div.className = "theory-mini-card";
           div.innerHTML = `
-            <span class="theory-mini-icon">${card.icon}</span>
-            <strong>${card.title}</strong>
-            <p>${card.text}</p>
-          `;
+          <span class="theory-mini-icon">${card.icon}</span>
+          <strong>${card.title}</strong>
+          <p>${card.text}</p>
+        `;
           tCards.appendChild(div);
         });
       } else {
@@ -721,7 +737,12 @@ document.addEventListener('DOMContentLoaded', () => {
       tContinue.textContent = options.continueLabel || "Tiếp tục video";
       tContinue.onclick = (e) => {
         e.stopPropagation();
+
         tOverlay.style.display = "none";
+        tOverlay.style.opacity = "0";
+        tOverlay.style.visibility = "hidden";
+        tOverlay.style.pointerEvents = "none";
+
         presentationActive = false;
 
         if (options.onContinue) {
@@ -744,8 +765,6 @@ document.addEventListener('DOMContentLoaded', () => {
         tSecondary.style.display = "none";
       }
     }
-
-    tOverlay.style.display = "flex";
   };
 
   const triggerDecision = (dec, index) => {
